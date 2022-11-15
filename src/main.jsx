@@ -4,7 +4,12 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 import App from "./App";
 import "./index.css";
-import store from "./store";
+
+// the old store without redux toolkit
+// import store from "./store";
+
+// the new store with redux toolkit
+import { store } from "./redux_toolkit/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

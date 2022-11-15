@@ -1,7 +1,17 @@
 import { useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { addProducts } from "../store/actions/products-actions";
+
+// the old actions without redux toolkit
+// import { addProduct } from "../store/actions/products-actions";
+
+// the new actions with redux toolkit
+import { addProduct } from "../redux_toolkit/slices/products-slice";
+
 import Product from "./Product";
+
+//* ==========================================
+//* we can continue use redux like react-redux
+//* ==========================================
 
 const Products = () => {
   
@@ -23,7 +33,7 @@ const Products = () => {
       </div>
       <button
           onClick={() => {
-            dispatch(addProducts({id: lastProductId + 1, title: inputOfTitle.current.value, body: inputOfBody.current.value}))
+            dispatch(addProduct({id: lastProductId + 1, title: inputOfTitle.current.value, body: inputOfBody.current.value}))
             inputOfTitle.current.value = ""
             inputOfBody.current.value = ""
         }}

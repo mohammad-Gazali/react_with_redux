@@ -1,11 +1,16 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchProducts } from '../store/actions/productsFetch-action'
+// the old actions without redux toolkit
+// import { fetchProducts } from '../store/actions/productsFetch-action'
+
+// the new actions with redux toolkit
+import { fetchProducts } from '../redux_toolkit/slices/productsFetch-slice'
+
 import Product from './Product'
 
 const ProductsFetch = () => {
     
-    const products = useSelector(state => state.productFetch)
+    const products = useSelector((state) => state.productFetch)
     const dispatch = useDispatch()
     
     useEffect(() => {

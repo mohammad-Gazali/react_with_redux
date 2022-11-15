@@ -1,6 +1,16 @@
 import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { withdraw, deposite } from "../store/actions/bank-actions";
+
+// the old actions without redux toolkit
+// import { withdraw, deposite } from "../store/actions/bank-actions";
+
+// the new actions with redux toolkit
+import { withdraw, deposite } from "../redux_toolkit/slices/bank-slice";
+
+
+//* ==========================================
+//* we can continue use redux like react-redux
+//* ==========================================
 
 
 const Bank = () => {
